@@ -27,7 +27,7 @@
     .swiper {
       width: 80%;
       height: auto;
-      padding: 50px;
+      padding: 10%;
     }
 
     .swiper-slide {
@@ -93,28 +93,14 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          origin: "left center",
-          translate: ["-5%", 0, -200],
-          rotate: [0, 100, 0],
-        },
-        next: {
-          origin: "right center",
-          translate: ["5%", 0, -200],
-          rotate: [0, -100, 0],
-        },
-      },
-      loop: true,
+      effect: "flip",
       lazy: true,
       autoHeight: true,
       zoom: true,
       spaceBetween: 30,
       centeredSlides: true,
       autoplay: {
-        delay: 3500,
+        delay: 5500,
         disableOnInteraction: false,
       },
     });
