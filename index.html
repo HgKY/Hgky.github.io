@@ -18,7 +18,7 @@
 
     body {
       background: #eee;
-      font-size: 14px;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       color: #000;
       margin: 0;
       padding: 0;
@@ -26,22 +26,14 @@
 
     .swiper {
       width: 100%;
-      height: 90%;
-      --swiper-navigation-top-offset: 90%;
+      height: 100%;
+	  --swiper-navigation-top-offset: 90%;
       --swiper-navigation-color: #3A0088;
     }
 
     .swiper-slide {
-      text-align: center;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
+      overflow: hidden;
+      font-size: 18px;
     }
     
     .swiper-pagination {
@@ -97,9 +89,7 @@
 
   <!-- Initialize Swiper -->
   <script>
-  const progressCircle = document.querySelector(".autoplay-progress svg");
-    const progressContent = document.querySelector(".autoplay-progress span");    
-    var swiper = new Swiper(".mySwiper", {
+	var swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -110,7 +100,6 @@
       },
       effect: "flip",
       lazy: true,
-      autoHeight: true,
       zoom: true,
       spaceBetween: 30,
       centeredSlides: true,
